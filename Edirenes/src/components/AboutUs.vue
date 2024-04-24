@@ -1,24 +1,21 @@
 <template>
+  <v-main>
   <div id="homepage">
     <v-container>
-      <v-layout column>
-        <v-carousel>
-          <v-carousel-item
-            src="public/cesar-guel-wds9ue_gops-unsplash.jpg"
-            cover
-          ></v-carousel-item>
-
+      <v-row>
+        <v-col cols="12">
+          <v-carousel cycle>
           <v-carousel-item 
-          src="public/jen-uppend-3mS_VX70noM-unsplash.jpg" 
-          cover
-          ></v-carousel-item>
-
-          <v-carousel-item
-            src="public/jen-uppend-T4FZYPixWfM-unsplash.jpg"
+            v-for="item in carouselItems"
+            :key="item.id"
+            :src="item.src"
             cover
-          ></v-carousel-item>
-        </v-carousel>
-      </v-layout>
+          />
+
+          </v-carousel>
+        </v-col>
+      </v-row>
+      
       <v-layout>
         <v-container>
           <v-row align="center" justify="center">
@@ -42,7 +39,26 @@
       </v-layout>
     </v-container>
   </div>
+</v-main>
 </template>
-<script setup>
-const variants = ["elevated", "flat", "tonal", "outlined"];
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      center: { lat: 51.093048, lng: 6.84212 },
+      carouselItems: [
+        {
+          id: 1, src: "/cesar-guel-wds9ue_gops-unsplash.jpg"
+        },
+        {
+          id: 2, src: "/jen-uppend-3mS_VX70noM-unsplash.jpg"
+        },
+        {
+          id: 3, src: "/jen-uppend-T4FZYPixWfM-unsplash.jpg"
+        },
+      ]
+    };
+  },
+};
 </script>

@@ -9,24 +9,27 @@
 
 
 <template>
-    <v-app-bar color="blue">
+    <v-app-bar color="white">
         <div>
-            <v-btn to = "/" color = "white" dark >Home</v-btn>
+            <v-btn to = "/" color = "blue" dark >Home</v-btn>
         </div>       
          <div>
-            <v-btn to = "/aboutus" color = "white" dark >About Us</v-btn>
+            <v-btn to = "/aboutus" color = "blue" dark >About Us</v-btn>
         </div>
         <div>
-            <v-btn to = "/gallery" color = "white" dark >Gallery</v-btn>
+            <v-btn to = "/gallery" color = "blue" dark >Gallery</v-btn>
         </div>
         <div>
-            <v-btn to = "/contactus" color = "white" dark >Contact Us</v-btn>
+            <v-btn to = "/contactus" color = "blue" dark >Contact Us</v-btn>
         </div>
         <div>
-            <v-btn to = "/menu" color = "white" dark >Menu</v-btn>
+            <v-btn to = "/menu" color = "blue" dark >Menu</v-btn>
         </div>
         <div>
-            <v-btn to = "/howtoorder" color = "white" dark >How To Order</v-btn>
+            <v-btn to = "/howtoorder" color = "blue" dark >How To Order</v-btn>
+        </div>
+        <div>
+            <v-btn to = "/login" color = "blue" dark >Log In</v-btn>
         </div>
      </v-app-bar>
 </template>

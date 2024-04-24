@@ -1,7 +1,7 @@
 <template>
-  <v-footer class="d-flex flex-column">
-    <div class="bg-blue d-flex w-100 align-center px-4">
-      <strong>Get connected with us on social networks!</strong>
+  <v-footer class="bg-blue fixed-bottom" padless app inset>
+    <div class="d-flex w-100 align-center px-4">
+      <strong class="text-white">Get connected with us on social networks!</strong>
 
       <v-spacer></v-spacer>
 
@@ -11,12 +11,60 @@
         class="mx-4"
         :icon="icon"
         variant="plain"
-        size="small"
+        size="medium"
+        @click="handleSocialMedia(icon)"
       ></v-btn>
     </div>
 
-    <div class="px-4 py-2 bg-black text-center w-100">
-      {{ new Date().getFullYear() }} — <strong>Edirene's Fruit Seedlings</strong>
+    <div class="px-32 py-16 bg-black text-white w-100">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row space-y-6 lg:space-y-0 items-center justify-between">
+          <div class="flex items-center justify-center">
+            <!-- <img
+              class="h-8 w-auto"
+              src="\tree seedling.jpg"
+              alt="Tree seedling"
+              width="100"
+              height="100"
+            /> -->
+          </div>
+          <div class="flex space-x-6 items-center justify-center">
+            <p class="text-paragraph opacity-80 text-[15px]">
+              &copy; 2024 Edirene's Seedlings All rights reserved.
+            </p>
+            <!-- Add social media icons here if needed -->
+          </div>
+        </div>
+      </div>
     </div>
   </v-footer>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      icons: [
+        'fab fa-facebook',
+        'fab fa-twitter',
+        'fab fa-linkedin',
+        'fab fa-instagram',
+      ],
+    }),
+    methods: {
+      handleSocialMedia(icon) {
+        // Implement your click handler here
+      },
+    },
+  }
+</script>
+
+<style scoped>
+.bg-blue {
+  background-color: rgb(22, 102, 213); /* Change the background color to blue */
+}
+.fixed-bottom {
+  position: fixed; /* Fix the footer to the bottom of the viewport */
+  bottom: 0; /* Position the footer at the bottom */
+  width: 100%; /* Make the footer span the entire width of the viewport */
+}
+</style>

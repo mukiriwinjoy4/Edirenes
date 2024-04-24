@@ -1,31 +1,59 @@
 <template>
+  <v-main>
     <v-row>
-      <v-col
-        v-for="n in 6"
-        :key="n"
-        class="d-flex child-flex"
-        cols="4"
+    <v-col
+      v-for="(image, index) in images"
+      :key="index"
+      class="d-flex child-flex"
+      cols="2"
+    >
+      <v-img
+        :src="`/${image}`"
+        :lazy-src="`/${image}`"
+        aspect-ratio="1"
+        cover
+        class="images bg-grey-lighten-2"
       >
-        <v-img
-          :src="`/jen-uppend-3mS_VX70noM-unsplash.jpgimage`"
-          :lazy-src="`/vladzimir-nikitsin-wY1GIiiTRak-unsplash.jpgimage`"
-          aspect-ratio="1"
-          cover
-          class="bg-grey-lighten-2"
-        >
-          <template v-slot:placeholder>
-            <v-row
-              class="fill-height ma-0"
-              align="center"
-              justify="center"
-            >
-              <v-progress-circular
-                indeterminate
-                color="grey-lighten-5"
-              ></v-progress-circular>
-            </v-row>
-          </template>
-        </v-img>
-      </v-col>
-    </v-row>
-  </template>
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular
+              indeterminate
+              color="grey-lighten-5"
+            ></v-progress-circular>
+          </v-row>
+        </template>
+      </v-img>
+    </v-col>
+  </v-row>
+  </v-main>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      
+      
+      images: [
+        'amirul-islam-vUlr2F01z-o-unsplash.jpg',
+        'cesar-guel-wds9ue_gops-unsplash.jpg',
+        'charlotte-harrison-RcDJZCVRrQ4-unsplash.jpg',
+        'jen-uppend-3mS_VX70noM-unsplash.jpg',
+        'jen-uppend-T4FZYPixWfM-unsplash.jpg',
+        'oriol-portell-AbwqpFnBDms-unsplash.jpg',
+        
+      ]
+    };
+  }
+};
+</script>
+
+<style>
+  .images{
+    border-radius: 5%;
+  }
+</style>

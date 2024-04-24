@@ -1,25 +1,22 @@
 <template>
+  <v-main>
     <div id="homepage">
       <v-container>
-        <v-layout column>
-          <v-carousel>
-                <v-carousel-item
-                src="/vladzimir-nikitsin-wY1GIiiTRak-unsplash.jpg"
-                cover
-                ></v-carousel-item>
-  
-                <v-carousel-item
-                src="/julian-ackroyd-DjN9dJH44d4-unsplash.jpg"
-                cover
-                ></v-carousel-item>
-    
-                <v-carousel-item
-                src="/oriol-portell-AbwqpFnBDms-unsplash.jpg"
-                cover
-                ></v-carousel-item>
+        <v-row>
+        <v-col cols="12">
+          <v-carousel cycle>
+          <v-carousel-item 
+            v-for="item in carouselItems"
+            :key="item.id"
+            :src="item.src"
+            cover
+          />
+
           </v-carousel>
-        </v-layout>
-        <v-layout>
+        </v-col>
+      </v-row>
+        
+        <v-row>
           <v-container>
             <v-row align="center" justify="center">
               <div class="d-flex align-center flex-column">
@@ -40,75 +37,82 @@
               </div>
             </v-row>
           </v-container>
-        </v-layout>
+        </v-row>
       </v-container>
     </div>
+  </v-main>
   </template>
   <script>
   export default {
-    // Properties returned from data() become reactive state
-    // and will be exposed on `this`.
+    
     data() {
       return {
+        center: { lat: 51.093048, lng: 6.84212 },
+      carouselItems: [
+        {
+          id: 1, src: "/vladzimir-nikitsin-wY1GIiiTRak-unsplash.jpg"
+        },
+        {
+          id: 2, src: "/julian-ackroyd-DjN9dJH44d4-unsplash.jpg"
+        },
+        {
+          id: 3, src: "/oriol-portell-AbwqpFnBDms-unsplash.jpg"
+        },
+      ],
+    
         fruit:[
             {
                 id: 1,
-                fruit: 'Hass Avocadoes'
+                fruit_seedlings: 'Hass Avocadoes'
            },
             {
                 id: 2,
-                fruit: 'pomegranates'
+                fruit_seedlings: 'pomegranates'
             },
             {
                 id: 3,
-                fruit: 'Yellow Passion'
+                fruit_seedlings: 'Yellow Passion'
            },
             {
                 id: 4,
-                fruit: 'Tommy'
+                fruit_seedlings : 'Tommy'
             },
             {
                 id: 5,
-                fruit: 'Kent'
+                fruit_seedlings: 'Kent'
             },
             {
                 id: 6,
-                fruit: 'Apple Mangoes'
+                fruit_seedlings: 'Apple Mangoes'
             },
             {
                 id: 7,
-                fruit: 'Tangerine'
+                fruit_seedlings: 'Tangerine'
             },
             {
                 id: 8,
-                fruit: 'Washington'
+                fruit_seedlings: 'Washington'
             },
             {
                 id: 9,
-                fruit: 'Pixie Oranges'
+                fruit_seedlings: 'Pixie Oranges'
             },
             {
                 id: 10,
-                fruit: 'Fuerte'
+                fruit_seedlings: 'Fuerte'
             },
           ],
         componentTitle: 'Fruit Seedlings'
       }
-    },
-  
-    // Methods are functions that mutate state and trigger updates.
-    // They can be bound as event handlers in templates.
+    },    
     methods: {
       increment() {
         this.count++
       }
-    },
-  
-    // Lifecycle hooks are called at different stages
-    // of a component's lifecycle.
-    // This function will be called when the component is mounted.
+    },    
     mounted() {
     console.log(this.fruit)
     }
+    
   }
   </script>

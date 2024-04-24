@@ -6,6 +6,8 @@ import Gallery from "./../components/Gallery.vue"
 import ContactUs from "./../components/ContactUs.vue"
 import Menu from "./../components/Menu.vue"
 import HowtoOrder from "./../components/HowtoOrder.vue"
+import Orders from "./../views/OrdersPage.vue"
+// import User from './../views/user.vue'
 
 
 const routes = [
@@ -39,6 +41,16 @@ const routes = [
         name: 'howtoorder',
         component: HowtoOrder ,
     },
+    {
+        path: '/order',
+        name: 'Oders',
+        component: Orders ,
+    },
+    // {
+    //     path: '/user',
+    //     name: 'Users',
+    //     component: User ,
+    // },
     
 ]
 
