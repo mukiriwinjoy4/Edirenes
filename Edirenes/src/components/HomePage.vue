@@ -3,7 +3,7 @@
     <v-main>
       <!-- Fullscreen Image -->
       <v-img
-        src="/Screenshot (5).png"
+        src="WhatsApp Image 2024-04-25 at 09.46.26_edd10602.jpg"
         class="d-flex align-center justify-center"
         style="height: 100vh; width: 100vw; object-fit: cover;"
       >

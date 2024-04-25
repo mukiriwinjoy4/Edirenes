@@ -19,9 +19,9 @@
         <v-row>
           <v-container>
             <v-row align="center" justify="center">
-              <div class="d-flex align-center flex-column">
+              <v-col cols="20 mx-auto my-20 mt-5">
                
-                    <v-card width="400">
+                    
                   <v-card-item>
                     <v-card-title>{{ componentTitle }}</v-card-title>
                     </v-card-item>
@@ -33,8 +33,8 @@
                         item-value="id"
                         ></v-list>
                     </v-card-text>
-                </v-card>
-              </div>
+                
+              </v-col>
             </v-row>
           </v-container>
         </v-row>

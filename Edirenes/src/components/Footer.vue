@@ -5,15 +5,14 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
+      <!-- Use v-icon component to display Font Awesome icons -->
+      <v-icon
         v-for="icon in icons"
         :key="icon"
         class="mx-4"
-        :icon="icon"
-        variant="plain"
-        size="medium"
+        :size="iconSize"
         @click="handleSocialMedia(icon)"
-      ></v-btn>
+      >{{ icon }}</v-icon>
     </div>
 
     <div class="px-32 py-16 bg-black text-white w-100">
@@ -41,21 +40,21 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-linkedin',
-        'fab fa-instagram',
-      ],
-    }),
-    methods: {
-      handleSocialMedia(icon) {
-        // Implement your click handler here
-      },
+export default {
+  data: () => ({
+    icons: [
+      'fab fa-facebook',
+      'fab fa-whatsapp',      
+      'fab fa-instagram',
+    ],
+    iconSize: '32', // Adjust the icon size as needed
+  }),
+  methods: {
+    handleSocialMedia(icon) {
+      // Implement your click handler here
     },
-  }
+  },
+}
 </script>
 
 <style scoped>

@@ -10,8 +10,8 @@ import * as directives from 'vuetify/directives'
 
 //Icons
 // import "./assets/reset.css";
-import { aliases, mdi } from "vuetify/lib/iconsets/mdi";
-// import '@mdi/font/css/materialdesignicons.css'
+// import { aliases, mdi } from "vuetify/lib/iconsets/mdi";
+import '@mdi/font/css/materialdesignicons.css'
  
 
 // import VueGoogleMaps from "@fawmi/vue-google-maps";
@@ -20,10 +20,8 @@ import { aliases, mdi } from "vuetify/lib/iconsets/mdi";
 const vuetify = createVuetify({
     icons: {
         defaultSet: "mdi",
-        aliases,
-        sets: {
-          mdi
-        }},
+       
+      },
   components,
   directives,
 })

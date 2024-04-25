@@ -44,10 +44,24 @@ export default {
       const response = await axios.get("http://127.0.0.1:8000/api/ordering");
       this.items = response.data;
     },
+    // async updateOrders() {
+    //   const response = await axios.update("http://127.0.0.1:8000/api/ordering");
+    //   this.items = response.data;
+    // },
+    // async deleteOrders() {
+    //   const response = await axios.delete("http://127.0.0.1:8000/api/ordering");
+    //   this.items = response.data;
+    // },
   },
 
   created() {
     this.getOrders();
   },
+  // created() {
+  //   this.updateOrders();
+  // },
+  // created() {
+  //   this.deleteOrders();
+  // },
 };
 </script>
