@@ -1,5 +1,5 @@
 <template>
-    <a :href="whatsappLink" class="btn btn-info">Contact via WhatsApp</a>
+    <a :href="whatsappLink" class="btn btn-primary">Contact via WhatsApp</a>
   </template>
   
   <script>
@@ -12,10 +12,10 @@
     },
     computed: {
       whatsappLink() {
-        const countryCode = '+254'; // Replace 'XX' with the actual country code
-        const phoneNumber = '716194355'; // Phone number
+        const countryCode = '+254'; 
+        const phoneNumber = '716194355'; 
         const baseUrl = 'https://wa.me/';
-        const encodedNumber = encodeURIComponent(`${countryCode}${phoneNumber.replace(/\D/g, '')}`); // Remove non-numeric characters
+        const encodedNumber = encodeURIComponent(`${countryCode}${phoneNumber.replace(/\D/g, '')}`); 
         const encodedMessage = encodeURIComponent(this.message);
         return `${baseUrl}${encodedNumber}?text=${encodedMessage}`;
       },
@@ -28,7 +28,7 @@
     color: #FFF;
     background-color: #17a2b8;
     border-color: #17a2b8;
-    cursor: pointer; /* Add pointer cursor on hover */
+    cursor: pointer; 
   }
   </style>
   
